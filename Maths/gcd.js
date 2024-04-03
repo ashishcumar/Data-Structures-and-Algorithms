@@ -18,12 +18,18 @@ const gcdReverse = (a, b) => {
   let gcdVal = 0;
   let min = a > b ? b : a;
   for (let i = min; i >= 1; i--) {
-    if (a % i === 0 && b % i === 0 && i > gcdVal) gcdVal = i; 
+    if (a % i === 0 && b % i === 0 && i > gcdVal) gcdVal = i;
   }
   return gcdVal;
 };
 
-console.log(gcdReverse(20, 40));
-console.log(gcdReverse(20, 30));
+// console.log(gcdReverse(20, 40));
+// console.log(gcdReverse(20, 30));
 
-/// FOR MORE OPTIMISED SOLUTION GO TO EUCLIDEAN ALGO FILE 
+/// FOR MORE OPTIMISED SOLUTION GO TO EUCLIDEAN ALGO FILE
+
+// GCD OF REPEATING NUMBERS :-
+
+const repeatingGcd = () => {
+  
+}
