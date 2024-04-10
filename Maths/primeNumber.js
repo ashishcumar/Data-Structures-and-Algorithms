@@ -1,3 +1,5 @@
+// RUN COMMAND :- node primeNumber.js
+
 /*
 PRIME NUMBER :- a positive integer greater than 1 that has exactly two factors: 1 and the number itself
 */
@@ -16,16 +18,15 @@ const isPrime = (n) => {
   return count === 2 ? true : false;
 };
 
-console.log(isPrime(9));
+// console.log(isPrime(9));
 
 // 1st APPROACH IS TO EXCLUDE 1 AND THE NUMBER ITSELF FROM LOOP AND IF THE NUMBER GET DIVIDED BY ANY OTHER NUMBER THEN ITS NOT A PRIME A NUMBER;
 
 const isPrime1 = (n) => {
   if (n <= 1) return false;
-  for (let i = 2; i * i < n; i++) {
+  for (let i = 2; i * i <= n; i++) {
     if (n % i === 0) return false;
   }
-
   return true;
 };
 
@@ -37,6 +38,22 @@ const isPrime2 = (n) => {
   return true;
 };
 
-[5, 11, 17, 29, 37, 41, 53, 59,49, 67, 71, 97, 101, 127, 149, 179].forEach((num) => {
-    console.log(isPrime2(num));
-})
+// [5, 11, 17, 29, 37, 41, 53, 59,49, 67, 71, 97, 101, 127, 149, 179].forEach((num) => {
+//     console.log(isPrime2(num));
+// })
+
+// COUNT PRIME IN A RANGE
+
+const countPrimeInRange = (l, r) => {
+  if (l > r) return "l should be smaller than r";
+  let count = 0;
+  for (let i = l; i <= r; i++) {
+    if (isPrime1(i)) {
+      count++;
+    }
+  }
+
+  return count;
+};
+
+console.log(countPrimeInRange(15, 50));

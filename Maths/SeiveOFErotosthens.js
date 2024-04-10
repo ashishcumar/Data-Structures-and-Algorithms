@@ -64,6 +64,6 @@ const primeTillNOptimised = (n) => {
   }
 };
 
-console.log(primeTillNOptimised(30));
+console.log(primeTillNOptimised(113));
 
 // TIME AND SPACE COMPLEXITY :- O(n)
