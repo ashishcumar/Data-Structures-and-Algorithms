@@ -30,17 +30,18 @@ const binaryToNum = (n) => {
 // WITHOUT USING Power Function
 
 const binToNum = (n) => {
-    n = n.toString()
-    let num = 0
+    let num = n
+    let decVal = 0
     let p = 1
-    for(let i = n.length-1;i>=0;i--){
-     if(n[i] == '1'){
-        console.log({v:n[i],num,p})
-         num = num + (p * p)
-         p = (p*p) * 2;
-     } 
-    }
-    return num
+    let temp = num
+   while(temp){
+    let lastDigit = temp%10
+    temp = Math.floor(temp / 10);
+    decVal += lastDigit * p
+    p = p * 2
+   }
+
+   return decVal
 }
 
 console.log(binToNum(1101));
