@@ -30,7 +30,7 @@ const binarySearchInRotatedArr = (arr, k) => {
 
     if (arr[m] === k) return m;
     else if (arr[m] < arr[r]) {
-      if (k > arr[m] && k <= arr[r]) {
+      if (k > arr[m] && k <= arr[r]) { // when we uncounter any sorted part 
         l = m + 1;
       } else {
         r = m - 1;

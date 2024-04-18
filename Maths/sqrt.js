@@ -1,5 +1,5 @@
 // RUN SCRIPT :- node sqrt.js
-
+/// TIME COMPLEXITY IS O(sqrt(n)) 
 // USING RUCURSION
 const sqrt = (n) => {
     let i =1;
@@ -10,7 +10,7 @@ const sqrt = (n) => {
     return i
 }
 
-/// TIME COMPLEXITY IS O(logn) 
+
 console.log(sqrt(225))
 
 // USING BINARY SEARCH 
